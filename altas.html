@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Alta de Artículos de Librería ✏️</title>
+    <link rel="shortcut icon" href="./static/img/libro.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="./static/css/estilos.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head> 
+
+<body> 
+    <header> 
+        <nav class="navbar-index "> 
+            <img class="logo-nav" src="./static/img/logoNombre.png" alt="logo Librería Martín"> 
+        </nav> 
+    </header>  
+    
+    <div class="logo-centrado">
+        <img class=logoImagen src="./static/img/logoImagen.png" alt="logo"> 
+    </div>
+    <h1>Agregar Artículo al Inventario</h1><br> 
+    
+    <!--enctype="multipart/form-data" es necesario para enviar archivos al back.--> 
+    <form id="formulario" enctype="multipart/form-data"> 
+        
+        <label for="descripcion">Artículo:</label> 
+        <input type="text" id="articulo" name="articulo" required><br>
+
+        <label for="descripcion">Descripción:</label> 
+        <input type="text" id="descripcion" name="descripcion" required><br> 
+        
+        <label for="cantidad">Cantidad:</label> 
+        <input type="number" id="cantidad" name="cantidad" required><br> 
+        
+        <label for="precio">Precio Unitario:</label>
+        <span>$</span> 
+        <input type="number" step="0.01" id="precio" name="precio" required><br> 
+        
+        <label for="imagenArticulo">Imagen del Artículo:</label> 
+        <input type="file" id="imagenArticulo" name="imagen"> 
+        
+        <br><br>
+        <label for="fechaRegistro">Fecha de Registro:</label>
+        <input type="date" id="fecha_registro" name="fecha_registro" required><br>
+
+        <br>
+        <label for="proveedorArticulo">Proveedor:</label> 
+        <input type="text" id="proveedorArticulo" name="proveedor"> 
+        
+        <button type="submit">Agregar Artículo</button> 
+        <a href="index.html">Menu principal</a> 
+    </form> 
+    
+    <script src="./static/js/altas.js"></script>
+    <script src="./static/js/simboloPeso.js"></script> 
+        
+</body> 
+</html>
